@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  /* GLASS CARD */
+  .card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 18px;
+    margin: 15px 0;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.09);
+  }
+
+  /* BUTTONS */
+  button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+  }
+
+  /* INPUTS */
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* CENTER TEXT OPTION */
+  .center {
+    text-align: center;
+  }
+
+  /* NAVBAR (optional if you want later) */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    opacity: 0.8;
+  }
+
+  .nav a:hover {
+    opacity: 1;
+  }
+</style>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🔐 Login Page</h1>
+
+<div class="container">
+
+<input type="text" id="username" placeholder="Enter Username"><br><br>
+<input type="password" id="password" placeholder="Enter Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+
+function login() {
+  var user = document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
+
+  if(user === "hilal" && pass === "1234") {
+  window.location.href = "home.html";
+  } else {
+    document.getElementById("message").innerText = "❌ Wrong username or password";
+  }
+}
+</script>
+
+</body>
+</html>
